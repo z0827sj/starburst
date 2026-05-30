@@ -1,0 +1,15 @@
+{
+  "manifest_version": 3,
+  "name": "StarBurst — GitHub Repo Insights",
+  "version": "1.0",
+  "description": "See real-time star bursts, ecosystem health, and trending data for any GitHub repo.",
+  "permissions": ["storage"],
+  "host_permissions": ["https://github.com/*", "http://localhost:3001/*"],
+  "content_scripts": [{
+    "matches": ["https://github.com/*"],
+    "js": ["content.js"],
+    "css": ["sidebar.css"],
+    "run_at": "document_end"
+  }],
+  "icons": { "16": "icon16.png", "48": "icon48.png", "128": "icon128.png" }
+}
